@@ -1,25 +1,88 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-
-    <!--
-        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
-        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
-    -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-    <title>AoJApp</title>
-
-    <!-- AoJApp references -->
-    <link href="css/index.css" rel="stylesheet" />
-</head>
-<body>
-    <p>Hello, your application is ready!</p>
-
-    <!-- Cordova reference, this is added to your app when it's built. -->
-    <script src="cordova.js"></script>
-    <script src="scripts/platformOverrides.js"></script>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Archers Of Jersey App</title>
+    <link href="Content/jquery.mobile-1.4.5.min.css" rel="stylesheet" />
+    <link href="css/jqm-demos.css" rel="stylesheet" />
     <script src="scripts/index.js"></script>
+
+    <script src="scripts/jquery-2.2.1.min.js"></script>
+    <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- HOME PAGE -->
+    <div data-role="page" id="home">
+
+        <div data-role="header">
+            <h1>AoJ App</h1>
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+            <div class="ui-grid-a">
+                <div class="ui-block-a"><a href="#two" class="ui-shadow ui-btn ui-corner-all"><img src="images/calendar-icon.png" width="100"/></a></div>
+                <div class="ui-block-b"><div class="button-wrap"><button class="ui-shadow ui-btn ui-corner-all"><img src="images/arrow-icon.png" width="100" /></button></div></div>
+            </div>
+        </div><!-- /content -->
+
+        <div data-role="footer" data-theme="a">
+            <h4>Page Footer</h4>
+        </div><!-- /footer -->
+    </div>
+    <!-- /HOME PAGE -->
+
+    <!-- CALENDAR -->
+    <div data-role="page" id="two" data-theme="a">
+
+        <div data-role="header" style="overflow:hidden;">
+            <h1>AoJ App</h1>
+            <a href="#home" data-icon="home" class="ui-btn-left">&nbsp</a>
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+            <h2>Who's Shooting When...</h2>
+            <ul data-role="listview" data-count-theme="b" data-inset="true">
+                <li><a href="#">Monday 1st <span class="ui-li-count">12</span></a></li>
+                <li><a href="#">Tuesday 2nd <span class="ui-li-count">0</span></a></li>
+                <li><a href="#">Wednesday 3rd <span class="ui-li-count">4</span></a></li>
+                <li><a href="#">Thursday 4th <span class="ui-li-count">328</span></a></li>
+                <li><a href="#">Friday 5th <span class="ui-li-count">62</span></a></li>
+                <li><a href="#">Saturday 6th <span class="ui-li-count">62</span></a></li>
+                <li><a href="#">Sunday 7th <span class="ui-li-count">62</span></a></li>
+            </ul>
+
+        </div><!-- /content -->
+
+        <div data-role="footer">
+            <h4>Page Footer</h4>
+        </div><!-- /footer -->
+    </div>
+    <!-- /CALENDAR -->
+
+
+    <!-- Start of third page: #popup -->
+    <div data-role="page" id="popup">
+
+        <div data-role="header" data-theme="b">
+            <h1>Dialog</h1>
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+            <h2>Popup</h2>
+            <p>I have an id of "popup" on my page container and only look like a dialog because the link to me had a <code>data-rel="dialog"</code> attribute which gives me this inset look and a <code>data-transition="pop"</code> attribute to change the transition to pop. Without this, I'd be styled as a normal page.</p>
+            <p><a href="#home" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back to page "one"</a></p>
+        </div><!-- /content -->
+
+        <div data-role="footer">
+            <h4>Page Footer</h4>
+        </div><!-- /footer -->
+    </div><!-- /page popup -->
+
 </body>
 </html>
